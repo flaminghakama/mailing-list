@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Annoucements Mailing List | Flaming Hakama</title>
+<script src="js/jquery-1.6.1.js" type="text/javascript"></script>
+<script src="js/browser-detect.js" type="text/javascript"></script>
+<script src="js/fh-announce.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" media="all" href="css/fh-announce.css" />
+</head>
+<body>
+<h1>Flaming Hakama Annoucements</h1>
+<h2>Mailing List Management</h2>
+
+<div id="process">
+<h3>Process Control</h3>
+
+
+<div class="clear"><label class="area" for="show-alert">Messages from Server</label><div id="show-alert">&nbsp;</div></div class="clear">
+
+
+<div id="controls">
+
+<div class="wait-time"><label for="wait-time">Wait Time (ms)</label><input id="wait-time" size="4" maxlength="6" value="4000"></div for_class="wait-time">
+
+<div class="checkbox"><label for="test-only">Test Only</label><input type="checkbox" value="test-only" id="test-only" checked></div for_class="">
+
+<div class="button"><button onclick="perform_action('what-to-do')">Go</button></div class="button">
+
+<div class="what-to-do">
+<select id="what-to-do">
+<option value="no-action-selected">[ Choose Action ]</option>
+<option value="parse-recipients">Parse Recipients</option>
+<option value="send-one">Send One Email</option>
+<option value="throttle-bcc">Throttle Emails (bcc)</option>
+<option value="throttle-to">Throttle Emails (to)</option>
+<option value="clear-queue">Clear Queue</option>
+<option value="clear-all">Clear All Lists</option>
+</select>
+</div for_class="what-to-do">
+
+</div for_id="controls">
+
+<div class="clear"><label class="area" for="recipients-all">Bcc Recipients (for Throttle) </label><textarea id="recipients-all" rows="6" cols="80">my_public_email@yahoo.com,elaine@flaminghakama.com</textarea></div class="clear">
+
+<div class="recipients-column"><label>Completed (<span id="completed-total">0</span>)</label><div id="recipients-completed">&nbsp;</div></div for_class="recipients-column">
+
+<div class="recipients-column"><label>Processing</label><div id="recipients-processing">&nbsp;</div></div for_class="recipients-column">
+
+<div class="recipients-column"><label>Queued (<span id="queued-total">0</span>)</label><div id="recipients-queued">&nbsp;</div></div for_class="recipients-column">
+</div for_class="clear">
+
+</div for_id="process">
+
+
+
+<div id="define-announcement">
+
+<div id="announcement">
+<h3>Email Draft</h3>
+<div id="draft">[ Results ]</div>
+</div for_id="announcement">
+
+
+<h3>Define Announcement</h3>
+
+
+<p>Make sure to prepare HTML email with <a target="_blank" href="http://premailer.dialect.ca">http://premailer.dialect.ca</a></p>
+
+<div class="define-announcement"><label for="email-to">To</label><input id="email-to" type="text" size="32" value="announce@flaminghakama.com"></div>
+<div class="define-announcement"><label for="email-cc">Cc</label><input id="email-cc" type="text" size="32" value=""></div>
+<div class="define-announcement"><label for="email-bcc">Bcc</label><input id="email-bcc" type="text" size="32" value=""></div>
+<div class="define-announcement"><label for="email-from-name">From Name</label><input id="email-from-name" type="text" size="32" value="David Elaine Alt"></div>
+<div class="define-announcement"><label for="email-from">From Email</label><input id="email-from" type="text" size="32" value="elaine@flaminghakama.com"></div>
+<div class="define-announcement"><label for="email-reply">Reply</label><input id="email-reply" type="text" size="32" value="announce@flaminghakama.com"></div>
+<div class="define-announcement"><label for="email-return">Return-Path</label><input id="email-return" type="text" size="32" value="bird@alum.mit.edu"></div>
+<div class="define-announcement"><label for="email-subject">Subject</label><input id="email-subject" type="text" size="48" value="[FH Announce] July 2013 gig update"></div>
+<div class="define-announcement">
+<label for="email-body">Body</label><textarea id="email-body" rows="24" cols="48">[ enter annoucements ]</textarea></div>
+
+</div><!-- id="define-announcement" -->
+
+
+</body>
+</html>

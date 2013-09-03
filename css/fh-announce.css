@@ -1,0 +1,42 @@
+
+body { font-family: Arial, sans-serif ; padding: 7px 23px 17px 17px ; }
+
+input, select, textarea { display: block ; outline: none ; border: none ; clear: none ; margin: 0px 0px 10px 0px ; padding: 2px 4px 4px 4px ; background: transparent ; border: 1px solid #393430 ; font-size: 11px ; } 
+
+label { float: left ; padding: 3px 0px 0px 0px ; margin: 0px 6px 0px 0px ; font-size: 13px ; font-weight: bold ; width: 100px ; text-align: right ; white-space: nowrap ;  border: 0px purple solid ; } 
+
+.define-announcement { white-space:nowrap; }
+
+#process { width: 550px ; min-width: 550px ; float: right ; margin: 0px 25px 0px 0px ; border: solid 0px yellow ; } 
+#process label { text-align: left ; border: solid 0px orange ; } 
+
+#controls { padding: 0px 0px 35px 0px ; border: solid 0px red ; } 
+#controls div { float: right ; margin: 0px 0px 0px 0px ; border: solid 0px blue ; }
+#controls label { white-space: nowrap; border: solid 0px purple ; } 
+#controls input { text-align: right ;} 
+#controls .checkbox { padding: 0px 10px 0px 18px ; }
+#controls .checkbox label { float: right ; text-align: left ; padding: 4px 0px 0px 18px ; }
+.checkbox input { margin: 7px 0px 0px 0px ; }
+#controls .what-to-do { padding: 3px 0px 0px 0px ; border: solid 0px orange ; } 
+#controls .button { padding: 1px 20px 0px 20px ; } 
+
+#process label.area { float: none ; text-align: left ; margin: 0px 0px 8px 0px ; } 
+#process textarea#recipients-all, #process div#show-alert { margin: 4px 0px 10px 0px ; } 
+.recipients-column { float: right ; width: 180px ; height: 500px ; border: solid 0px green ; } 
+.recipients-column.clear { clear: both ; } 
+
+div#recipients-queued { height: 500px; border: solid 0px gray ; } 
+
+#define-announcement, #draft { width: 500px ; min-width: 500px  ; margin: 0px 0px 0px 15px ; border: solid 0px aqua ; } 
+
+
+dl { margin: 0px 0px 0px 0px ; } 
+dl dt { float: left ; display: inline ; text-align: right ; width: 60px ; font-size: 11px ; color: #8b1b1d ; font-weight: bold ; line-height: 13px ; margin: 0px 8px 0px 10px ; } 
+dl dd { font-size: 11px ; color: #8b1b1d ; line-height: 13px ; } 
+
+dl dt.headers { margin: 0px 3px 60px 10px ; }
+
+ul { clear: both ; margin: 0px ; padding: 10px 0px 0px 0px ; } 
+ul li { display: block ; font-size: 10px ; list-style: none ; margin:0px ; padding: 0px ; }
+
+#show-alert { height: 60px ; padding: 0px 12px 12px 0px ; font-size: 13px ; font-weight: bold ; color: #8b1b1d ; border: solid 1px black ; }

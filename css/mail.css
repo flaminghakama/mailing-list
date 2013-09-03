@@ -1,0 +1,32 @@
+body {
+font-size: 14px;
+color: #999;
+margin-left: 4px;
+background: #fffbe9;
+}
+
+//color: #ffffff;
+//background-image: url(http://flaminghakama.com/wp-content/themes/flaminghakama/images/greyline-main.gif) no-repeat;
+h1, h2, h3 {
+font-weight: normal;
+text-transform: uppercase;
+text-align: left;
+padding: 5px 0px 5px 0px;
+margin: 0px 0px 14px 0px;
+}
+
+h1 { font-size: 20px; }
+h2 { font-size: 18px; margin-top: 32px ; }
+h3 { font-size: 16px; margin-top: 24px ; }
+
+
+ul { 
+  list-style: none; 
+  padding-start: 0px ;  
+  -webkit-padding-start: 0px;
+}
+
+ul li.link { font-size: 12px ; }
+a { color: #8b1b1d ; text-decoration: none ; }
+
+p { margin: 8px 0px 8px 0px ; }
