@@ -144,7 +144,6 @@ function perform_action(select_id) {
 
     if (what_to_do === 'throttle-merge-to') { 
 	if (set_in_process_merge_recipient('email-to')) { 
-            merge_message() ; 
 	    ajax_mail('throttle-merge-to') ;  	
 	} else { 	
 	    show_alert('There are no queued recipients.') ; 
@@ -236,7 +235,6 @@ function ajax_mail(how_many){
 	verb = 'send-mail' ; 
 	show_alert('Sending mail to ' + show_recipients()) ; 
     }
-
 
     var query_string = "verb=" + verb ; 
     query_string += "&email-to=" + $('#email-to').val() ; 
@@ -602,6 +600,7 @@ function set_in_process_recipient(field_name) {
 
     Populates the variables in_process_recipient and in_process_name
     Populates the specified field (eg, To:) with the email address
+    This includes the body field, which is done by way of the merge_message() function.
 
     There can be multiple names (first, last, etc.)
     but only the first name is used and any others are ignored.
@@ -640,6 +639,7 @@ function set_in_process_merge_recipient(field_name) {
 	$(selector).val(in_process_recipient) ; 
 	populate_in_process_recipient() ;	
 	populate_in_process_name() ;	
+        merge_message() ; 
 	
 	queued_recipients.splice(0,1) ;
 	populate_queued_recipients() ; 
@@ -664,8 +664,8 @@ function set_in_process_merge_recipient(field_name) {
 */
 function merge_message() {
 
-    //alert("in merge_message") ; 
     var template = $('#message-template').val() ; 
+    //alert("in merge_message with template: " + template) ; 
     $('#email-body').val(template.split("XXX_NAME_XXX").join(in_process_name)) ; 
 }
 
