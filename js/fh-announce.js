@@ -163,6 +163,13 @@ function perform_action(select_id) {
 	return ;
     }
 
+    if (what_to_do === 'clear-all-merge') { 
+	clear_queue() ; 
+	clear_completed() ; 
+	clear_in_process_merge() ; 
+	return ;
+    }
+
     show_alert('Did not understand the selected action: ' + what_to_do) ; 
 }
 
@@ -346,6 +353,16 @@ function clear_queue() {
 function clear_in_process() {
     in_process_recipient = '' ; 
     $('#recipients-processing').html('') ; 
+}
+
+
+/*
+    Removes any data in the in_process_recipient variable
+*/
+function clear_in_process_merge() {
+    in_process_recipient = '' ; 
+    $('#recipients-processing').html('') ; 
+    $('#recipients-processing-name').html('') ; 
 }
 
 
